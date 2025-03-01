@@ -1,8 +1,9 @@
 const express = require("express");
 const { dbConnect } = require("./dbConnect");
 const { userRoute } = require("./routes/user.route");
+const {AchievementRoute} = require("./routes/achivements")
 const cors = require("cors")
-const multer = require("multer");
+
 
 require("dotenv").config();
 
@@ -12,10 +13,12 @@ app.use(cors({
   methods: ["GET", "POST"],
 
 }))
+
 const port = Number(process.env.PORT_NUMBER) || 5000;
 
 app.use(express.json());
 app.use("/", userRoute)
+app.use("/",AchievementRoute)
 
 app.get("/", (req, res) => {
   res.send("Testing backend....");
