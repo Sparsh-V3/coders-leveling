@@ -24,7 +24,7 @@ function Navbar() {
         ☰
       </div>
       <div className={`contents ${menuOpen ? "show" : ""}`}>
-        <p>Home</p>
+        <p onClick={() => {navigate("/")}}>Home</p>
         <p>Dashboard</p>
         <p>Leaderboard</p>
         <p>Achievements</p>
