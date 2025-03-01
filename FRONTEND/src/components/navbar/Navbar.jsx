@@ -11,6 +11,10 @@ function Navbar() {
     navigate("/signup")
   }
 
+  const handleLogin = () => {
+    navigate("/login")
+  }
+
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -31,7 +35,7 @@ function Navbar() {
       </div>
       <div className={`signup-login ${menuOpen ? "show" : ""}`}>
         <button onClick={handleSignup}>Signup</button>
-        <button>Login</button>
+        <button onClick={handleLogin}>Login</button>
       </div>
     </nav>
   );
