@@ -8,9 +8,14 @@ body {
 }
 
 .container {
-  text-align: center;
-  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 50px;
   font-family: Arial, sans-serif;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .container h1{
@@ -58,5 +63,23 @@ body {
 .about .right img {
   width: 100%;
 }
+
+.cta-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background: #ff5722;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background: #e64a19;
+}
+
 
 

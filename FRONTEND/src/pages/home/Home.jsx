@@ -6,9 +6,14 @@ function Home() {
   return (
     <>
       <div className="container">
-        <h1>Welcome To Gamify Wellness!</h1>
-        <p>Accept the yoga routine, and become body fit🧘‍♀️</p>
+        <div className="sub-container">
+          <h1>Transform Your Mind & Body with <span>Gamify Wellness</span></h1>
+          <p>Join a thriving community where fitness meets fun! <br/> 
+            Track your progress, connect with friends, and turn workouts into a game.</p>
+          <button className="cta-button">Join Now</button>
+        </div>
       </div>
+        
 
       <div className="about">
         <div className="left">
@@ -22,15 +27,13 @@ function Home() {
             just connect to your community, do daily yoga with all and remain
             fit in all season.
           </p>
+
+          <button className="cta-button">Join Now</button>
+
         </div>
         <div className="right">
           <img src={yoga1} alt="" />
         </div>
-      </div>
-
-      <div className="features">
-        <h2>Track Yogasanas</h2>
-        <p>Log your daily yoga poses and monitor your progress over time.</p>
       </div>
     </>
   );
