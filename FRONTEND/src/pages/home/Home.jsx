@@ -35,11 +35,6 @@ function Home() {
           <img src={yoga1} alt="" />
         </div>
       </div>
-
-      <div className="features">
-        <h2>Track Yogasanas</h2>
-        <p>Log your daily yoga poses and monitor your progress over time.</p>
-      </div>
     </>
   );
 }
