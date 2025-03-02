@@ -19,7 +19,7 @@ userRoute.post("/signup", async (req, res) => {
     const hashedPass = await bcrypt.hash(password, saltRounds);
     const newUser = UserModel({ name, email, password: hashedPass });
     await newUser.save();
-    res.status(201).json({ msg: "User Signup Successful!!!" });
+    res.status(201).json({ success: true, msg: "User Signup Successful!" });
   } catch (error) {
     console.error("Error in signup:", error);
     res.status(500).json({ msg: "Internal Server Error" });

@@ -29,9 +29,9 @@ function Navbar() {
       </div>
       <div className={`contents ${menuOpen ? "show" : ""}`}>
         <p onClick={() => {navigate("/")}}>Home</p>
-        <p>Dashboard</p>
+        <p onClick={() => {navigate("/dashboard")}}>Dashboard</p>
         <p>Leaderboard</p>
-        <p>Achievements</p>
+        <p onClick={() => {navigate("/achievements")}}>Achievements</p>
       </div>
       <div className={`signup-login ${menuOpen ? "show" : ""}`}>
         <button onClick={handleSignup}>Signup</button>

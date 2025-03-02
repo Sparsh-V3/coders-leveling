@@ -15,7 +15,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/achivements" element={<Achievements />} />
+        <Route path="/achievements" element={<Achievements />} />
       </Routes>
     </Router>
   );

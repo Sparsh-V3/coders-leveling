@@ -68,6 +68,15 @@
     background: #0056b3;
   }
   
+  .gender {
+    /* border: 1px solid black; */
+    display: flex;
+    width: fit-content;
+    gap: .5rem;
+    padding: .2rem;
+    justify-content: center;
+  }
+
   /* Responsive Design */
   @media (max-width: 500px) {
     #signup {
