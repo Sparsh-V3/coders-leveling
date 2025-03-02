@@ -14,10 +14,10 @@ function Signup() {
     setUserData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleFileChange = (event) => {
-    setUserData((prevData) => ({ ...prevData, avatar: event.target.files[0] }));
-    console.log(userData);
-  };
+  // const handleFileChange = (event) => {
+  //   setUserData((prevData) => ({ ...prevData, avatar: event.target.files[0] }));
+  //   console.log(userData);
+  // };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -26,10 +26,10 @@ function Signup() {
     formData.append("name", userData.name);
     formData.append("email", userData.email);
     formData.append("password", userData.password);
-    formData.append("avatar", userData.avatar);
+    // formData.append("avatar", userData.avatar);
 
     try {
-      const response = await fetch("http://localhost:3000/signup", {
+      const response = await fetch("http://localhost:8080/signup", {
         method: "POST",
         body: formData,
       });
@@ -55,10 +55,14 @@ function Signup() {
           <label htmlFor="password">Password : </label>
           <input type="password" name="password" onChange={handleChange} />
         </div>
-        <div className="avatar">
+        <div className="dob">
+          <label htmlFor="dob">Date of birth : </label>
+          <input type="Date" name="dob" />
+        </div>
+        {/* <div className="avatar">
           <label htmlFor="avatar">Profile Pic : </label>
           <input type="file" name="avatar" id="" onChange={handleFileChange} />
-        </div>
+        </div> */}
         <div className="submit">
           <button>Signup</button>
         </div>

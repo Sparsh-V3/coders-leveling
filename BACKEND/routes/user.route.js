@@ -9,7 +9,7 @@ const userRoute = express.Router();
 // User Signup -->
 
 userRoute.post("/signup", async (req, res) => {
-  const { name, email, password, avatar } = req.body;
+  const { name, email, password } = req.body;
   const saltRounds = Number(process.env.SALT_ROUNDS);
   try {
     const checkEmail = await UserModel.findOne({ email });
@@ -17,7 +17,7 @@ userRoute.post("/signup", async (req, res) => {
       return res.status(400).json({ msg: "The user already exists" });
     }
     const hashedPass = await bcrypt.hash(password, saltRounds);
-    const newUser = UserModel({ name, email, password: hashedPass, avatar });
+    const newUser = UserModel({ name, email, password: hashedPass });
     await newUser.save();
     res.status(201).json({ msg: "User Signup Successful!!!" });
   } catch (error) {
